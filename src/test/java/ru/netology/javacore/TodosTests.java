@@ -65,11 +65,13 @@ public class TodosTests {
 
         List<String> resultList = todos.getTasks();
 
-        String expected = "[Погулять с детьми, Постирать белье, Проверить почту] ";
+        String expected = "Погулять с детьми Постирать белье Проверить почту ";
 
         Collections.sort(resultList);
         StringBuilder builder = new StringBuilder();
-        builder.append(resultList).append(" ");
+        for (String resultTask : resultList) {
+            builder.append(resultTask).append(" ");
+        }
         String result = builder.toString();
 
         Assertions.assertEquals(expected, result);

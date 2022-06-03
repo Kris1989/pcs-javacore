@@ -22,7 +22,9 @@ public class Todos {
     public String getAllTasks() {
         Collections.sort(tasks);
         StringBuilder builder = new StringBuilder();
-        builder.append(tasks).append(" ");
-        return builder.toString();
+        for (String task : tasks) {
+            builder.append(task).append(" ");
+        }
+        return tasks.toString();
     }
 }
